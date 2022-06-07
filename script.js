@@ -1,30 +1,45 @@
 // Assignment code here
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
-}
+};
 
 
 function getRandomChar () {
-  var lowerCase = 'abcdefghijklmnopqrstuvwxyz'
-  var upperCase = lowerCase.toUpperCase()
-  var numbers = '0123456789'
-  var specialChars = '`!@#$%^&*()_+=-}{;][/'
-  var chars = lowerCase + upperCase + numbers + specialChars
-  var randomIndex = getRandomInteger(0, chars.length)
-  var randomChar = chars[randomIndex] 
+  var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+  var upperCase = lowerCase.toUpperCase();
+  var numbers = '0123456789';
+  var specialChars = '`!@#$%^&*()_+=-}{;][/';
+  var chars = lowerCase + upperCase + numbers + specialChars;
+  var randomIndex = getRandomInteger(0, chars.length);
+  var randomChar = chars[randomIndex];
 
 
-  return randomChar
+  return randomChar;
 }
 
 function generatePassword() {
-  var string = ''
-  for(var i = 0; i < 15; i++) {
+  var passwordLenght = prompt('Please enter password lenght between 12 - 128');
+  var includeNumbers = confirm('Do you want your password to include numbers?');
+  var includeLowercase = confirm('Do you want your password to include Lowecase?');
+  var includeUppercase = confirm('Do you want your password to include Uppercase?');
+  var includeSpecialChars = confirm('Do you want your password to include Special Characters?');
 
-    string = string + getRandomChar() 
+  var string = '';
+
+  if(passwordLenght < 12 || passwordLenght > 128  ) {
+    alert('You chose the wrong number. Please try again');
+
+    return string;
+  }
+  
+  
+  
+  for(var i = 0; i < passwordLenght; i++) {
+
+    string = string + getRandomChar() ;
 
   } 
-  return string
+  return string;
 }
 
 // Get references to the #generate element
