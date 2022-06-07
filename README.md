@@ -25,11 +25,13 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 
-## Changes Made
+## Worked on
 
+Prompted user with questions to determine user choices
+Ensured that criteria was met
 
 ## Demo
 URL: https://artur0705.github.io/W3-Challenge-password-generator/
 
 ## Screenshot
-![image]()
+![image](./assets/screenshot.jpeg)
