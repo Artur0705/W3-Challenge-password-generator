@@ -20,7 +20,7 @@ function getRandomChar () {
 
 function generatePassword() {
   // Get requried parametres from user
-  var passwordLenght = prompt('Please enter password lenght between 12 - 128');
+  var passwordLenght = prompt('Please enter password lenght between 8 - 128');
   var includeNumbers = confirm('Do you want your password to include numbers?');
   var includeLowercase = confirm('Do you want your password to include lowecase?');
   var includeUppercase = confirm('Do you want your password to include uppercase?');
@@ -30,7 +30,7 @@ function generatePassword() {
   passwordLenght = parseInt(passwordLenght);
 
   // Check for correct password lenght
-  if(passwordLenght < 12 || passwordLenght > 128 || !Number.isInteger(passwordLenght) ) {
+  if(passwordLenght < 8 || passwordLenght > 128 || !Number.isInteger(passwordLenght) ) {
     alert('You chose the wrong number. Please try again');
 
     return string;
